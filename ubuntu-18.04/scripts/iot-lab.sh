@@ -6,6 +6,7 @@ apt-get -y install vim emacs
 apt-get -y install python-setuptools
 apt-get -y install python-argparse python-pip
 apt-get -y install mosquitto-clients
+apt-get -y install socat gcc-multilib
 
 ARM_GCC_URL="https://developer.arm.com/-/media/Files/downloads/gnu-rm"
 ARM_GCC_VERSION="7-2018q2"
