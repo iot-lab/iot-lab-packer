@@ -25,8 +25,8 @@ sudo apt-get install virtualbox (testing with 5.2)
   * Vagrant: (https://www.vagrantup.com/downloads.html - tested with 2.2.4)
   
 ``` 
-wget https://releases.hashicorp.com/vagrant/2.x.x/vagrant_2.2.4_x86_64.deb
-dpkg -i vagrant_2.2.4_x86_64.deb
+wget https://releases.hashicorp.com/vagrant/2.x.x/vagrant_2.x.x_x86_64.deb
+dpkg -i vagrant_2.x.x_x86_64.deb
 ```
 
 **Building VM** :
