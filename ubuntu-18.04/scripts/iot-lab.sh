@@ -1,12 +1,8 @@
 #!/bin/bash -eux
 
-apt-get -y install cmake curl git 
-apt-get -y install gcc-arm-none-eabi gcc-msp430
-apt-get -y install vim emacs
-apt-get -y install python-setuptools
-apt-get -y install python-argparse python-pip
-apt-get -y install mosquitto-clients
-apt-get -y install socat gcc-multilib
+apt-get install -y cmake curl git gcc-arm-none-eabi gcc-msp430 vim emacs \
+    python-setuptools python-argparse python-pip python3-pip mosquitto-clients \
+    socat g++-multilib build-essential
 
 ARM_GCC_URL="https://developer.arm.com/-/media/Files/downloads/gnu-rm"
 ARM_GCC_VERSION="7-2018q2"
@@ -23,8 +19,14 @@ export GITAMFLAGS="--ignore-whitespace"
 export PATH=/opt/gcc-arm-none-eabi-7-2018-q2-update/bin:\$PATH
 EOF
 
-cd /home/vagrant && git clone https://github.com/iot-lab/iot-lab.git
+# IoT-LAB CLI tools
+pip3 install iotlabwscli iotlabsshcli iotlabcli
 
-pip install iotlabwscli
-pip install iotlabsshcli
-pip install iotlabcli
+# Python tools
+pip3 install aiocoap paho-mqtt pyserial
+pip install paho-mqtt pyserial
+
+# GNU Radio
+apt-get install -y gnuradio gr-osmosdr
+
+cd /home/${VM_USERNAME} && git clone https://github.com/iot-lab/iot-lab.git
