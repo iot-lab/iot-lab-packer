@@ -1,4 +1,4 @@
-**/packer_cache
-**/builds
-*.box
-*.vagrant
+packer_cache/
+builds/
+output-virtualbox-iso/
+.vagrant/
