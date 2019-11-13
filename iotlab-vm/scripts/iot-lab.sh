@@ -26,6 +26,9 @@ pip3 install iotlabwscli iotlabsshcli iotlabcli
 pip3 install aiocoap paho-mqtt pyserial
 pip install paho-mqtt pyserial
 
+# Jupyter
+pip3 install jupyter jupyterlab
+
 # GNU Radio
 apt-get install -y gnuradio gr-osmosdr
 
