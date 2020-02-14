@@ -22,12 +22,18 @@ EOF
 # IoT-LAB CLI tools
 pip3 install iotlabwscli iotlabsshcli iotlabcli
 
+# IoT-LAB Plot OML tools
+pip install https://github.com/iot-lab/oml-plot-tools/archive/0.6.0.tar.gz
+
 # Python tools
 pip3 install aiocoap paho-mqtt pyserial
 pip install paho-mqtt pyserial
 
 # Jupyter
 pip3 install jupyter jupyterlab
+# Jupyter Kernel version 2 (OML monitoring notebooks)
+python2 -m pip install ipykernel
+python2 -m ipykernel install --user
 
 # GNU Radio
 apt-get install -y gnuradio gr-osmosdr
