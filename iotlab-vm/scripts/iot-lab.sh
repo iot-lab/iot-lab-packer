@@ -26,8 +26,7 @@ pip3 install iotlabwscli iotlabsshcli iotlabcli
 pip install https://github.com/iot-lab/oml-plot-tools/archive/0.6.0.tar.gz
 
 # Python tools
-pip3 install aiocoap paho-mqtt pyserial
-pip install paho-mqtt pyserial
+pip3 install aiocoap paho-mqtt pyserial cbor ed25519
 
 # Jupyter
 pip3 install jupyter jupyterlab
