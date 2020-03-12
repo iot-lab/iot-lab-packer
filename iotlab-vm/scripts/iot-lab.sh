@@ -38,3 +38,8 @@ python2 -m ipykernel install --user
 apt-get install -y gnuradio gr-osmosdr
 
 cd /home/${VM_USERNAME} && git clone https://github.com/iot-lab/iot-lab.git
+
+# IOTLAB_LOGIN environment variable
+cat << EOF >> /home/${VM_USERNAME}/.bashrc
+export IOTLAB_LOGIN
+EOF
