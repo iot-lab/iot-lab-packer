@@ -30,7 +30,21 @@ export PATH=/opt/gcc-arm-none-eabi-7-2018-q2-update/bin:\$PATH
 EOF
 
 # IoT-LAB CLI tools
-pip3 install iotlabwscli iotlabsshcli iotlabcli
+pip3 install --no-cache \
+        aiocoap==0.3 \
+        cbor==1.0.0 \
+        ed25519==1.5 \
+        iotlabcli==3.2.0 \
+        iotlabsshcli \
+        iotlabwscli==0.2.0 \
+        ipympl==0.5.6 \
+        ipywidgets==7.5.1 \
+        jupyterlab==2.0.1 \
+        paho-mqtt==1.5.0 \
+        pycayennelpp==1.3.0 \
+        python-cayennelpp==0.0.4 \
+        pyserial \
+        #
 
 # IoT-LAB Plot OML tools
 pip3 install --no-cache git+https://github.com/iot-lab/oml-plot-tools.git@0.7.0
