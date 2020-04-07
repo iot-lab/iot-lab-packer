@@ -1,8 +1,18 @@
 #!/bin/bash -eux
 
-apt-get install -y cmake curl git gcc-arm-none-eabi gcc-msp430 vim emacs \
-    python-setuptools python-argparse python-pip python3-pip mosquitto-clients \
-    socat g++-multilib build-essential
+apt-get install -y \
+        build-essential \
+        cmake \
+        curl \
+        emacs \
+        g++-multilib \
+        git \
+        gcc-msp430 \
+        mosquitto-clients \
+        python3-pip \
+        socat \
+        vim \
+        #
 
 ARM_GCC_URL="https://developer.arm.com/-/media/Files/downloads/gnu-rm"
 ARM_GCC_VERSION="7-2018q2"
