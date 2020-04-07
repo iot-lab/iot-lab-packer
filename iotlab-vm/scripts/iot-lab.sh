@@ -49,11 +49,17 @@ pip3 install --no-cache \
 # IoT-LAB Plot OML tools
 pip3 install --no-cache git+https://github.com/iot-lab/oml-plot-tools.git@0.7.0
 
-# Python tools
-pip3 install aiocoap paho-mqtt pyserial cbor ed25519
+# Install nodejs for jupyter extensions
+bash <(curl -sL https://deb.nodesource.com/setup_13.x)
+apt-get install -y nodejs
 
-# Jupyter
-pip3 install jupyter jupyterlab
+jupyter lab clean
+jupyter lab build --dev-build=False --minimize=False
+
+# jupyterlab interactive widgets/plot extensions
+jupyter labextension install @jupyter-widgets/jupyterlab-manager --minimize=False
+jupyter labextension install jupyter-matplotlib --minimize=False
+jupyter nbextension enable --py widgetsnbextension
 
 # GNU Radio
 apt-get install -y gnuradio gr-osmosdr
